@@ -10,16 +10,19 @@ class ProjectAddDialog extends StatelessWidget {
   ProjectAddDialog({this.project});
   @override
   Widget build(BuildContext context) {
-    return SimpleDialog(
-      children: <Widget>[
-        AddTaskView(
-          onAdd: (String taskTitle) {
-            bool wasSuccessful = context.read<ToDoData>().addToProject(
-                Task(title: taskTitle, parent: project.title), project);
-            Navigator.pop(context, wasSuccessful);
-          },
-        ),
-      ],
+    return Dialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      elevation: 0.0,
+      backgroundColor: Colors.white,
+      child: AddTaskView(
+        onAdd: (String taskTitle) {
+          bool wasSuccessful = context.read<ToDoData>().addToProject(
+              Task(title: taskTitle, parent: project.title), project);
+          Navigator.pop(context, wasSuccessful);
+        },
+      ),
     );
   }
 }

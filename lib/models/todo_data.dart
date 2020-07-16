@@ -10,7 +10,7 @@ class ToDoData extends ChangeNotifier {
 
   bool addTask(Task task) {
     print('tasks updated');
-    if (task.title == null) {
+    if (task.title == null || task.title == '') {
       return false;
     }
     for (Task prevTask in tasks) {
@@ -71,7 +71,7 @@ class ToDoData extends ChangeNotifier {
   }
 
   bool addProject(Project project) {
-    if (project.title == null) {
+    if (project.title == null || project.title == '') {
       return false;
     }
     for (Project prevProject in projects) {
@@ -98,7 +98,7 @@ class ToDoData extends ChangeNotifier {
   }
 
   bool addToProject(Task task, Project project) {
-    if (task.title == null) {
+    if (task.title == null || task.title == '') {
       return false;
     }
     for (Task prevTask in project.tasks) {

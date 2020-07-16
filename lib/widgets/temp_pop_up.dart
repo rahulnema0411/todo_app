@@ -9,11 +9,6 @@ class PopUpDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     String taskTitle;
     return SimpleDialog(
-      elevation: 5.0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0),
-      ),
-      contentPadding: EdgeInsets.all(12.0),
       children: <Widget>[
         Text(
           'Task',
