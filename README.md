@@ -2,6 +2,9 @@
 
 A simple, easy to use To-Do App
 
+![iPhone X-XS-11 Pro – 3](https://user-images.githubusercontent.com/43380701/89055007-5347ba00-d377-11ea-9db5-8974913ab1f8.png)
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
